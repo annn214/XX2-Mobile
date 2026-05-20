@@ -1,4 +1,4 @@
-package com.f55124089.cinerow;
+package com.f55124089.XX2.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,7 +13,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.f55124089.cinerow.databinding.ActivityMainBinding;
+import com.f55124089.XX2.R;
+import com.f55124089.XX2.controller.FilmCallback;
+import com.f55124089.XX2.controller.FilmController;
+import com.f55124089.XX2.databinding.ActivityMainBinding;
+import com.f55124089.XX2.model.Film;
 
 import java.util.ArrayList;
 import java.util.List;

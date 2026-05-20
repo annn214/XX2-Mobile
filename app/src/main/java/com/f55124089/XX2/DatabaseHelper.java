@@ -1,10 +1,12 @@
-package com.f55124089.cinerow;
+package com.f55124089.XX2;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.f55124089.XX2.model.Film;
 
 import java.util.ArrayList;
 import java.util.List;

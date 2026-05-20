@@ -1,4 +1,4 @@
-package com.f55124089.cinerow;
+package com.f55124089.XX2.view;
 
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,7 +9,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
-import com.f55124089.cinerow.databinding.ActivityDetailBinding;
+import com.f55124089.XX2.DatabaseHelper;
+import com.f55124089.XX2.R;
+import com.f55124089.XX2.databinding.ActivityDetailBinding;
+import com.f55124089.XX2.model.Film;
 
 public class DetailActivity extends AppCompatActivity {
 

@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.f55124089.cinerow"
+    namespace = "com.f55124089.XX2"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.f55124089.cinerow"
+        applicationId = "com.f55124089.XX2"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -57,4 +57,6 @@ dependencies {
     implementation("com.facebook.shimmer:shimmer:0.5.0")
     implementation("com.airbnb.android:lottie:6.4.0")
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
 }

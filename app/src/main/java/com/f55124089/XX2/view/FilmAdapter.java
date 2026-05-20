@@ -1,4 +1,4 @@
-package com.f55124089.cinerow;
+package com.f55124089.XX2.view;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+import com.f55124089.XX2.R;
+import com.f55124089.XX2.model.Film;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.f55124089.cinerow;
+package com.f55124089.XX2.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,7 +7,10 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.f55124089.cinerow.databinding.ActivityAddFilmBinding;
+import com.f55124089.XX2.controller.FilmCallback;
+import com.f55124089.XX2.controller.FilmController;
+import com.f55124089.XX2.databinding.ActivityAddFilmBinding;
+import com.f55124089.XX2.model.Film;
 
 import java.util.List;
 

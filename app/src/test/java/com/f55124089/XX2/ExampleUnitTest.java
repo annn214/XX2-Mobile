@@ -1,4 +1,4 @@
-package com.f55124089.cinerow;
+package com.f55124089.XX2;
 
 import org.junit.Test;
 

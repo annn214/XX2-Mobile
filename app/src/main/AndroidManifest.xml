@@ -15,10 +15,10 @@
         android:theme="@style/Theme.CineRow"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".FavoriteActivity"
+            android:name=".view.FavoriteActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".view.MainActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -28,13 +28,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".DetailActivity"
+            android:name=".view.DetailActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".view.MainActivity" />
         <activity
-            android:name=".AddFilmActivity"
+            android:name=".view.AddFilmActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".view.MainActivity"
             android:windowSoftInputMode="adjustResize" />
     </application>
 

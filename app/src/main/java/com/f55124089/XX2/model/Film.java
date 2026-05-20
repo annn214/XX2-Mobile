@@ -1,4 +1,4 @@
-package com.f55124089.cinerow;
+package com.f55124089.XX2.model;
 
 /**
  * ─────────────────────────────────────────────────────────────
@@ -57,30 +57,4 @@ public class Film {
     public String getDeskripsi() { return deskripsi; }
     public void setDeskripsi(String deskripsi) { this.deskripsi = deskripsi; }
 
-    /**
-     * Mengubah objek Film menjadi string JSON untuk request body POST.
-     * Kita buat manual agar tidak perlu library Gson (menjaga ketergantungan minimal).
-     * Format harus cocok dengan yang diharapkan server MockAPI.
-     */
-    public String toJson() {
-        return "{"
-                + "\"judul\":\"" + escapeJson(judul) + "\","
-                + "\"genre\":\"" + escapeJson(genre) + "\","
-                + "\"poster\":\"" + escapeJson(poster) + "\","
-                + "\"deskripsi\":\"" + escapeJson(deskripsi) + "\""
-                + "}";
-    }
-
-    /**
-     * Membersihkan karakter khusus yang bisa merusak format JSON.
-     * Contoh: jika deskripsi mengandung tanda kutip ("), harus di-escape menjadi \"
-     */
-    private String escapeJson(String value) {
-        if (value == null) return "";
-        return value
-                .replace("\\", "\\\\")   // backslash harus di-escape duluan
-                .replace("\"", "\\\"")   // tanda kutip ganda
-                .replace("\n", "\\n")    // newline
-                .replace("\r", "\\r");   // carriage return
-    }
 }

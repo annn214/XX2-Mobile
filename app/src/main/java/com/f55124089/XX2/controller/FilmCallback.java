@@ -1,6 +1,6 @@
-package com.f55124089.cinerow;
+package com.f55124089.XX2.controller;
 
-import com.f55124089.cinerow.Film;
+import com.f55124089.XX2.model.Film;
 import java.util.List;
 
 /**

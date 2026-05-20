@@ -5,6 +5,6 @@
     <item
         android:id="@+id/action_fav_toggle"
         android:icon="@android:drawable/btn_star_big_off"
-        android:title="Favorit"
+        android:title="Favorite"
         app:showAsAction="always" />
 </menu>
