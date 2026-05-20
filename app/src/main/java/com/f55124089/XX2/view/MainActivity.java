@@ -13,6 +13,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+// TAMBAHAN IMPORT GLIDE
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+
 import com.f55124089.XX2.R;
 import com.f55124089.XX2.controller.FilmCallback;
 import com.f55124089.XX2.controller.FilmController;
@@ -51,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements FilmCallback {
     }
 
     private void setupUI() {
-        // PENTING: Mengaktifkan toolbar agar bisa dipasang ikon menu (Favorite)
+        // Mengaktifkan toolbar agar bisa dipasang ikon menu (Favorite)
         setSupportActionBar(binding.toolbar);
 
         // Setup RecyclerView Trending (Horizontal)
@@ -91,19 +95,14 @@ public class MainActivity extends AppCompatActivity implements FilmCallback {
         });
     }
 
-    // ==========================================================
-    // REVISI: MENAMBAHKAN IKON FAVORITE DI POJOK KANAN ATAS
-    // ==========================================================
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Menghubungkan file res/menu/menu_main.xml ke toolbar
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Logika saat ikon bintang diklik
         if (item.getItemId() == R.id.action_favorite) {
             Intent intent = new Intent(this, FavoriteActivity.class);
             startActivity(intent);
@@ -111,7 +110,6 @@ public class MainActivity extends AppCompatActivity implements FilmCallback {
         }
         return super.onOptionsItemSelected(item);
     }
-    // ==========================================================
 
     private void filterFilm(String text) {
         if (text.isEmpty()) {
@@ -161,6 +159,19 @@ public class MainActivity extends AppCompatActivity implements FilmCallback {
     }
 
     private void splitAndDisplayData(List<Film> films) {
+        if (!films.isEmpty() && binding.cvBannerPromo != null) {
+            Film premiereFilm = films.get(0);
+
+            Glide.with(this)
+                    .load(premiereFilm.getPoster())
+                    .placeholder(R.drawable.ic_poster_placeholder)
+                    .error(R.drawable.ic_poster_placeholder)
+                    .transition(DrawableTransitionOptions.withCrossFade(400))
+                    .centerCrop()
+                    .into(binding.ivBannerImage);
+        }
+        // =========================================================
+
         List<Film> trendingList = new ArrayList<>();
         List<Film> allFilmsList = new ArrayList<>();
 
